@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vinny’s Route Optimizer</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; background:#0b0b0b; color:#f2f2f2; }
+    header { padding: 16px; background:#111; position: sticky; top:0; z-index: 10; }
+    h1 { margin: 0; font-size: 18px; }
+    main { padding: 16px; max-width: 720px; margin: 0 auto; }
+    .card { background:#141414; border:1px solid #222; border-radius: 12px; padding: 14px; margin: 12px 0; }
+    label { display:block; font-size: 12px; opacity:.8; margin-top: 10px; }
+    input, textarea { width:100%; padding: 10px; border-radius: 10px; border:1px solid #2a2a2a; background:#0f0f0f; color:#fff; }
+    button { padding: 10px 12px; border-radius: 10px; border:1px solid #2a2a2a; background:#1b1b1b; color:#fff; margin-top: 12px; width:100%; font-weight: 600; }
+    button:active { transform: scale(.99); }
+    .row { display:flex; gap:10px; }
+    .row > * { flex:1; }
+    .muted { opacity:.75; font-size: 12px; line-height: 1.35; }
+    .result { padding: 10px; border-radius: 10px; background:#0f0f0f; border:1px solid #2a2a2a; margin-top: 10px; }
+    .danger { background:#2a1212; border-color:#4a1b1b; }
+    .ok { background:#102415; border-color:#1f3a25; }
+    .small { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vinny’s Route Optimizer</h1>
+    <div class="muted">
+      Store customers locally by phone • Works offline after first load • Tap Navigate to open Maps
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 style="margin:0 0 8px 0; font-size:16px;">Lookup (by phone)</h2>
+      <label>Phone Number</label>
+      <input id="lookupPhone" placeholder="(561) 555-1234" inputmode="tel" />
+      <button id="btnLookup">Find Customer</button>
+
+      <div id="lookupOut" class="result" style="display:none;"></div>
+
+      <div class="row">
+        <button id="btnNavigate" style="display:none;">Navigate</button>
+        <button id="btnDelete" style="display:none; background:#2a1212; border-color:#4a1b1b;">Delete</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 8px 0; font-size:16px;">Save / Update Customer</h2>
+
+      <div class="row">
+        <div>
+          <label>Phone (key)</label>
+          <input id="phone" placeholder="5615551234" inputmode="tel" />
+        </div>
+        <div>
+          <label>Name</label>
+          <input id="name" placeholder="John Doe" />
+        </div>
+      </div>
+
+      <label>Address</label>
+      <input id="address" placeholder="123 Main St, West Palm Beach, FL 33401" />
+
+      <label>Notes (optional)</label>
+      <textarea id="notes" rows="2" placeholder="Gate code, leave at door, etc."></textarea>
+
+      <button id="btnSave">Save Customer</button>
+      <div id="saveOut" class="result small" style="display:none;"></div>
+
+      <div class="muted" style="margin-top: 10px;">
+        Tip: after you find a customer, the Save form auto-fills so you can quickly update details.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 8px 0; font-size:16px;">Offline notes</h2>
+      <div class="muted">
+        This app stores customer data on this device only. Restarting your phone/iPad won’t erase it.
+        Data is only lost if Safari website data is cleared or private browsing is used.
+      </div>
+    </div>
+  </main>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
