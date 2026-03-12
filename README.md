@@ -21,7 +21,7 @@ It is designed for delivery drivers, service professionals, or anyone needing to
 ---
 
 ## Demo
-[Watch the video](https://www.youtube.com/watch?v=VnmwqDk0mcs)
+[![Watch the video](https://img.youtube.com/vi/VnmwqDk0mcs/0.jpg)](https://www.youtube.com/watch?v=VnmwqDk0mcs)
 
 ---
 
