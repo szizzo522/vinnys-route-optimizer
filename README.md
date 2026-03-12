@@ -142,6 +142,10 @@ The app will load, and service worker caching will work.
 2. **Add to Home Screen**:  
    - **iOS:** Share → Add to Home Screen  
    - **Android:** Menu → Add to Home Screen
+## Demo
+View More on my [YouTube](https://www.youtube.com/@Research-Farm)
+
+[![Watch the video](https://img.youtube.com/shorts/9JoHgMpDArc/0.jpg)](https://www.youtube.com/shorts/9JoHgMpDArc)
 
 3. Lookup, add, edit, or delete customers as on desktop.  
 4. Use offline once the app has been opened online (cached by `sw.js`).
