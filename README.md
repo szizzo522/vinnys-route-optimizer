@@ -20,6 +20,11 @@ It is designed for delivery drivers, service professionals, or anyone needing to
 
 ---
 
+## Demo
+[Watch the video](https://www.youtube.com/watch?v=VnmwqDk0mcs)
+
+---
+
 ## Features
 
 - **Customer Lookup:** Enter a phone number and retrieve stored customer info.  
@@ -121,6 +126,7 @@ The app will load, and service worker caching will work.
 
 3. **Delete Customers**  
    - Click **Delete** to remove the customer from the database.
+ ![Delete Screenshot](images/delete_screenshot.png)
 
 4. **Navigate to Address**  
    - Click **Navigate** to open the address in **Apple Maps**.  
