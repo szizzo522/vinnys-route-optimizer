@@ -16,7 +16,7 @@ It is designed for delivery drivers, service professionals, or anyone needing to
 - Delete customer records  
 - Open the customer’s address in **Apple Maps** for navigation  
 - Works on **desktop and mobile**  
-- Optional offline support via **service worker (PWA)**
+- Offline support via **service worker (PWA)**
 
 ---
 
@@ -103,14 +103,6 @@ python -m http.server 8000
 
 Open a browser and go to: `http://localhost:8000`  
 The app will load, and service worker caching will work.
-
-**Option 2: VSCode Live Server (Recommended for beginners)**
-
-1. Install [Visual Studio Code](https://code.visualstudio.com/).  
-2. Open your project folder in VSCode.  
-3. Install the **Live Server** extension from the VSCode Marketplace.  
-4. Right-click `index.html` → **Open with Live Server**.  
-5. The app opens in your browser and fully supports PWA features.
 
 ---
 
